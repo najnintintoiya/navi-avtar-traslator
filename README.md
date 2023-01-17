@@ -1,4 +1,4 @@
-## ABout App
+## About App
 
 This is app is made with vanillajs.
 
