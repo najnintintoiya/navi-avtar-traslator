@@ -5,12 +5,12 @@ var btnTranslate = document.querySelector('#btn-translate');
 var serverURL = "https://api.funtranslations.com/translate/navi.json";
 
 function constructURL(text){
-    return serverURL + "?text=" + text;
+    return serverURL + "?" + "text=" + text 
 }
 
 function tarnslateURL() {
-    var text = userInput.value;
-    fetch(constructURL(text))
+    var inputText = userInput.value;
+    fetch(constructURL(inputText))
     .then(response => response.json())
     .then(json => userOutput.innerText =json.contents.translated)
     .catch(errorHandler)
